@@ -1,0 +1,21 @@
+<h1>My users are:</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= link_to user.name, user_path(user) %></td>
+        <td><%= user.email %></td>
+        <td><%= user.url %></td>
+      </tr>
+    <% end %>
+    <%= @users %>
+  </tbody>
+</table>
